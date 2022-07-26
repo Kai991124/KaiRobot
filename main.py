@@ -18,7 +18,7 @@ def post_data():
             print(message)
             if (re.search(r'吃啥',message)):
                eat_what(gid)
-            search_jx3(message)
+            search_jx3(message,gid)
     return 'yes'
 if __name__ =='__main__':
     app.run(debug=True, host='127.0.0.1', port=5701)  # 此处的 host和 port对应上面 yml文件的设置
