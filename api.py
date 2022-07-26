@@ -59,10 +59,10 @@ def search_jx3(command):
                                                 data['camp'],
                                                 data['draw']))
 
-def send_msg(message,gid=718030876):
+def send_msg(message):
     requests.get(url='http://127.0.0.1:5700/send_group_msg?group_id={0}&message={1}'.format(gid,message))
 
-def eat_what():
+def eat_what(gid):
     eat_file_path='不知道吃什么就打开.xlsx'
     df=pd.read_excel(eat_file_path)
     food_list=df['都是档口啊'].to_list()
@@ -70,7 +70,7 @@ def eat_what():
     reply='吃点什么呢？考虑一下这几个？\n'
     for i in range(3):
         reply=reply+'-'*4+food_list[res[i]]+'\n'
-    send_msg(reply,718030876)
+    send_msg(reply,gid)
 
 def dingqun():
     sort=random.randint(1,100)

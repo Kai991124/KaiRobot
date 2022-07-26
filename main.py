@@ -17,7 +17,7 @@ def post_data():
             dingqun()
             print(message)
             if (re.search(r'吃啥',message)):
-               eat_what()
+               eat_what(gid)
             search_jx3(message,gid)
     return 'yes'
 if __name__ =='__main__':
