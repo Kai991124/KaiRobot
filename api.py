@@ -59,7 +59,7 @@ def search_jx3(command):
                                                 data['camp'],
                                                 data['draw']))
 
-def send_msg(message):
+def send_msg(message,gid):
     requests.get(url='http://127.0.0.1:5700/send_group_msg?group_id={0}&message={1}'.format(gid,message))
 
 def eat_what(gid):
