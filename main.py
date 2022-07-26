@@ -14,7 +14,7 @@ def post_data():
         # print(request.get_json().get('raw_message'), 'group: ',gid,'user: ',uid)
         gid=950128534
         if (gid==gid):
-            dingqun()
+            dingqun(gid)
             print(message)
             if (re.search(r'吃啥',message)):
                eat_what(gid)

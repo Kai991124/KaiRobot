@@ -77,7 +77,7 @@ def eat_what(gid):
     send_msg(reply, gid)
 
 
-def dingqun():
+def dingqun(gid):
     sort = random.randint(1, 100)
     if (sort >= 0 and sort <= 60):
-        send_msg(requests.get('https://www.jx3api.com/app/random').json()['data']['text'],gid)
+        send_msg(requests.get('https://www.jx3api.com/app/random').json()['data']['text'], gid)
