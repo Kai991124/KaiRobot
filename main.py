@@ -13,12 +13,12 @@ def post_data():
         message = request.get_json().get('raw_message')
         # print(request.get_json().get('raw_message'), 'group: ',gid,'user: ',uid)
         gid=950128534
-        if (gid==950128534):
+        if (gid==gid):
             dingqun()
             print(message)
             if (re.search(r'吃啥',message)):
                eat_what(gid)
-            search_jx3(message,gid)
+            search_jx3(message)
     return 'yes'
 if __name__ =='__main__':
     app.run(debug=True, host='127.0.0.1', port=5701)  # 此处的 host和 port对应上面 yml文件的设置
